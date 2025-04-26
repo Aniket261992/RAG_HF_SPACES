@@ -19,7 +19,7 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           git config pull.rebase false
-          git pull https://Aniket2692:$HF_TOKEN@huggingface.co/spaces/Aniket2692/QA_RAG_BUDGET_PDF main
+          git pull --allow-unrelated-histories https://Aniket2692:$HF_TOKEN@huggingface.co/spaces/Aniket2692/QA_RAG_BUDGET_PDF main
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
