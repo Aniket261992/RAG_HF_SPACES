@@ -28,7 +28,7 @@ if "llm" not in st.session_state:
     st.session_state.llm = ChatOpenAI(model="gpt-4o",api_key=OPENAI_API_KEY)
 
 if "astra_vector_index" not in st.session_state:
-    loader = PyPDFLoader("budget_speech.pdf",mode="single")
+    loader = PyPDFLoader("/home/user/app/budget_speech.pdf",mode="single")
     docs = loader.load()
     raw_text = [doc.page_content for doc in docs]
     full_text = "/n/n".join(raw_text)
